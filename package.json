@@ -1,0 +1,7 @@
+{
+  "name": "ts-snip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tatsuya sasaki <sasaki@neopa.jp>",
+  "license": "MIT"
+}
