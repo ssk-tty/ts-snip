@@ -11,10 +11,10 @@ export class CsvStreamer {
   }
 
   /**
-   * write stream to response
+   * write stream on response
    * @param res
    */
-  writeToResponse = (res: Response) => <T>(data: T[], fileName: string): void => {
+  writeOnResponse = (res: Response) => <T>(data: T[], fileName: string): void => {
     res = this.setHeaders(res)(fileName);
 
     const ss = this.stringifier
