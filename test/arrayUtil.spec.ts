@@ -1,4 +1,4 @@
-import {isIn} from '../src/arrayUtil';
+import {isAllIn, isIn} from '../src/arrayUtil';
 
 describe('arrayUtil', () => {
   describe('positive', () => {
@@ -14,5 +14,18 @@ describe('arrayUtil', () => {
       expect(checkFunc('a')).toBeTruthy();
       expect(checkFunc('z')).toBeFalsy();
     });
+
+      it('isAllIn', async () => {
+          const testArray = [
+              'a',
+              'b',
+              'c',
+          ];
+
+          const checkFunc = isAllIn(testArray);
+
+          expect(checkFunc(['a', 'b'])).toBeTruthy();
+          expect(checkFunc(['a', 'z'])).toBeFalsy();
+      });
   });
 });
